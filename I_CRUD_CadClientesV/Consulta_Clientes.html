@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="author" content="Grupo VI Engenharia de Software">
+  <meta name="description" content="Celebrart Eventos">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consulta de Clientes | Celebrart</title>
+  <link rel="stylesheet" href="../styles.css/styles.css">
+</head>
+<body>
+    <!-- Cabeçalho Padrão -->
+    <header class="navbar">
+      <div class="container navbar__content">
+        <a href="javascript:history.back()" class="btn-voltar-header" aria-label="Voltar">
+          <svg class="btn-voltar__icone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="15 18 9 12 15 6" />
+          </svg>
+        </a>
+        <a href="../index.html" class="logo">Celebrart</a>
+        
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="/index.html" class="nav__link">Home</a>
+            </li>
+            
+            <li class="nav__item">
+              <a href="/I_CRUD_CadClientesV/Consulta_Clientes.html" class="nav__link">Clientes</a>
+              <ul class="submenu">
+                <li><a href="/IV_CRUD_ReservaV/Consulta_Reservas.html" class="submenu__link">Consultar Reserva</a></li>
+                <li><a href="/V_CRUD_ListaEsperaV/ConsultaListaEspera_F.html" class="submenu__link">Lista de Espera</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav__item">
+              <a href="/II_CRUD_FuncionariosV/Consulta_funcionarios.html" class="nav__link">Funcionários</a>
+              <ul class="submenu">
+                <li><a href="/VI_CRUD_CadInfoEstoqueV/Consulta_Estoque.html" class="submenu__link">Estoque</a></li>
+                <li><a href="/VII_CRUD_Limpeza/Consulta_Limpeza.html" class="submenu__link">Escala de Limpeza</a></li>
+                <li><a href="/VIII_FolhaPagamento/CadastroFP.html" class="submenu__link">Folha de Pagamento</a></li>
+                <li><a href="/relatorioFluxoCaixa/Consulta_FC.html" class="submenu__link">Fluxo de Caixa</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav__item">
+              <a href="/III_CRUD_TerceirizadosV/Consulta_terceirizados.html" class="nav__link">Terceirizados</a>
+            </li>
+          </ul>
+          
+          <a href="/IV_CRUD_ReservaV/Cadastrar_Reservas.html" class="btn btn--accent">Agende seu horário!</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Fim Cabeçalho Padrão -->
+
+  <!-- Conteúdo Principal -->
+  <main class="container">
+    <div class="page-header">
+      <h1 class="page-title">Consulta de Clientes</h1>
+      <p class="page-subtitle">Pesquise clientes por CPF ou cadastre novos.</p>
+    </div>
+    
+    <div class="card">
+      <form class="form" action="Consulta_Cadastro_result.html" method="get">
+        <div class="form__group">
+          <label for="CPF" class="form__label">CPF:</label>
+          <input type="text" id="CPF" name="CPF" class="form__control" placeholder="Digite o CPF do cliente (somente números)">
+        </div>
+        
+        <div class="form__actions">
+          <button type="submit" onclick="window.location.href='Consulta_Cadastro_result';" class="btn btn--primary">Consultar</button>
+          <a href="Cadastro_Clientes.html" class="btn btn--outline">Novo Cadastro</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

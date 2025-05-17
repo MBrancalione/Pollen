@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Grupo VI Engenharia de Software">
+    <meta name="description" content="Celebrart Eventos - Página Inicial">
+    <title>Página Inicial | Celebrart</title>
+    <link rel="stylesheet" href="styles.css/styles.css">
+    <style>
+      /* Estilos específicos para a página inicial */
+      .hero {
+        background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        color: white;
+        padding: 5rem 1rem;
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+      
+      .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+      
+      .hero-subtitle {
+        font-size: 1.25rem;
+        max-width: 600px;
+        margin: 0 auto 2rem;
+        opacity: 0.9;
+      }
+      
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+        margin-bottom: 3rem;
+      }
+      
+      .feature-card {
+        background-color: var(--surface);
+        border-radius: var(--radius);
+        padding: 2rem;
+        text-align: center;
+        transition: var(--transition);
+        box-shadow: var(--shadow-sm);
+      }
+      
+      .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-md);
+      }
+      
+      .feature-icon {
+        font-size: 2.5rem;
+        color: var(--primary);
+        margin-bottom: 1rem;
+      }
+      
+      .feature-title {
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
+        color: var(--primary);
+      }
+      
+      .quick-actions {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Cabeçalho Padrão -->
+    <header class="navbar">
+      <div class="container navbar__content">
+        <a href="Inicio_Clientes.html" class="logo">Celebrart</a>
+        
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html" class="nav__link">Home</a>
+            </li>
+            
+            <li class="nav__item">
+              <a href="I_CRUD_CadClientesV/Consulta_Clientes.html" class="nav__link">Edifícios</a>
+              <ul class="submenu">
+                <li><a href="IV_CRUD_ReservaV/Consulta_Reservas.html" class="submenu__link">Consultar Reserva</a></li>
+                <li><a href="V_CRUD_ListaEsperaV/ConsultaListaEspera_F.html" class="submenu__link">Lista de Espera</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav__item">
+              <a href="II_CRUD_FuncionariosV/Consulta_funcionarios.html" class="nav__link">Funcionários</a>
+              <ul class="submenu">
+                <li><a href="VI_CRUD_CadInfoEstoqueV/Consulta_Estoque.html" class="submenu__link">Estoque</a></li>
+                <li><a href="VII_CRUD_Limpeza/Consulta_Limpeza.html" class="submenu__link">Escala de Limpeza</a></li>
+                <li><a href="VIII_FolhaPagamento/CadastroFP.html" class="submenu__link">Folha de Pagamento</a></li>
+                <li><a href="relatorioFluxoCaixa/Consulta_FC.html" class="submenu__link">Fluxo de Caixa</a></li>
+              </ul>
+            </li>
+            
+            <li class="nav__item">
+              <a href="III_CRUD_TerceirizadosV/Consulta_terceirizados.html" class="nav__link">Terceirizados</a>
+            </li>
+          </ul>
+          
+          <a href="IV_CRUD_ReservaV/Cadastrar_Reservas.html" class="btn btn--accent">Agende seu horário!</a>
+        </nav>
+      </div>
+    </header>
+    <!-- Fim Cabeçalho Padrão -->
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+      <section class="hero">
+        <h1 class="hero-title">Celebrart Eventos</h1>
+        <p class="hero-subtitle">Soluções completas para gestão de eventos, reservas e equipes</p>
+        <a href="IV_CRUD_ReservaV/Cadastrar_Reservas.html" class="btn btn--primary">Agende agora!</a>
+      </section>
+      
+      <div class="card">
+        <h2 class="page-title">Nossos Serviços</h2>
+        <p class="page-subtitle">Tudo que você precisa para gerenciar seu negócio de eventos</p>
+        
+        <div class="features">
+          <div class="feature-card">
+            <div class="feature-icon">📅</div>
+            <h3 class="feature-title">Agendamento Inteligente</h3>
+            <p>Gerencie reservas, confirme eventos e visualize sua agenda em tempo real.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">👥</div>
+            <h3 class="feature-title">Gestão de Clientes</h3>
+            <p>Cadastro completo com histórico de eventos, preferências e contatos.</p>
+          </div>
+          
+          <div class="feature-card">
+            <div class="feature-icon">🧹</div>
+            <h3 class="feature-title">Controle de Equipe</h3>
+            <p>Escalas de trabalho, folha de pagamento e gestão de terceirizados.</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="card">
+        <h2 class="page-title" style="font-size: 1.5rem; margin-bottom: 1.5rem;">Acesso Rápido</h2>
+        <div class="quick-actions">
+          <a href="IV_CRUD_ReservaV/Cadastrar_Reservas.html" class="btn btn--outline">Nova Reserva</a>
+          <a href="I_CRUD_CadClientesV/Consulta_Clientes.html" class="btn btn--outline">Clientes</a>
+          <a href="II_CRUD_FuncionariosV/Consulta_funcionarios.html" class="btn btn--outline">Funcionários</a>
+          <a href="III_CRUD_TerceirizadosV/Consulta_terceirizados.html" class="btn btn--outline">Terceirizados</a>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
